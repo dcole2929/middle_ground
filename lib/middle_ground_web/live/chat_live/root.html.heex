@@ -1,0 +1,12 @@
+<Chats.sidebar chats={@chats} chat={@chat} live_action={@live_action} />
+<div class="p-4 sm:ml-64"> 
+  <Chat.show
+    :if={@live_action == :show}
+    messages={@streams.messages}
+    current_user_id={@current_user.id}
+    chat={@chat}
+    scrolled_to_top={@scrolled_to_top}
+  />
+</div>
+
+<.live_component module={Message.EditForm} message={@message} id="message-edit-form" />

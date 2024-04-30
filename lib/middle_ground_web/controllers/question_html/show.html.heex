@@ -1,0 +1,38 @@
+<h1 class="text-2xl md:text-2xl font-bold text-gray-800 leading-tight mt-6 mb-4 text-center">
+  <%= @question.text %>
+</h1>
+<form action={"/questions/#{@question.id}/submit"} method="post" class="space-y-4 bg-white p-4 rounded-lg shadow">
+  <input type="hidden" name="_csrf_token" value={ get_csrf_token() } />
+
+  <!-- Radio buttons container -->
+  <div class="flex flex-col space-y-2">
+    <!-- Each radio option -->
+    <div class="flex items-center space-x-2">
+      <input type="radio" id="strongly_disagree" name="response" value="strongly_disagree" class="radio radio-primary">
+      <label for="strongly_disagree" class="ml-2 text-sm text-gray-700">Strongly Disagree</label>
+    </div>
+
+    <div class="flex items-center space-x-2">
+      <input type="radio" id="disagree" name="response" value="disagree" class="radio radio-primary">
+      <label for="disagree" class="ml-2 text-sm text-gray-700">Disagree</label>
+    </div>
+
+    <div class="flex items-center space-x-2">
+      <input type="radio" id="neutral" name="response" value="neutral" class="radio radio-primary">
+      <label for="neutral" class="ml-2 text-sm text-gray-700">Neutral</label>
+    </div>
+
+    <div class="flex items-center space-x-2">
+      <input type="radio" id="agree" name="response" value="agree" class="radio radio-primary">
+      <label for="agree" class="ml-2 text-sm text-gray-700">Agree</label>
+    </div>
+
+    <div class="flex items-center space-x-2">
+      <input type="radio" id="strongly_agree" name="response" value="strongly_agree" class="radio radio-primary">
+      <label for="strongly_agree" class="ml-2 text-sm text-gray-700">Strongly Agree</label>
+    </div>
+  </div>
+
+  <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Submit</button>
+</form>
+

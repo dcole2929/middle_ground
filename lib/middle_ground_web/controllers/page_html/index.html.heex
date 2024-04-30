@@ -1,0 +1,8 @@
+<h1>The Big Questions</h1>
+<.table
+  id="questions"
+  rows={@questions}
+  row_click={fn question -> JS.navigate(~p"/questions/#{question}") end}
+>
+  <:col :let={question} label="Question"><%= question.text %></:col>
+</.table>

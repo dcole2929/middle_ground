@@ -26,4 +26,7 @@ In general, with more time, I'd probably try to improve on the UI. Specifically 
 
 To ensure actual conversation and not just posting you're optimizing for time spent reading. You'd likely want to measure how many messages were spent and intervals between them to ensure people are actually reading what each other say. You'd ideally also run some sort of sentient analysis engine on the chat. This would help with moderation but also be a useful tool for examining what topics trigged the most passion and division.  
 
-
+# NOTES
+- There is an admin account which can be used to create new questions/statements
+- The url for the admin dashboard is https://middle-ground.fly.dev/admin/questions
+- The admin details are located in priv/repo/seeds.ex

@@ -14,22 +14,6 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
-  # web:
-  #   build: .
-  #   depends_on:
-  #     - db
-  #   environment:
-  #     MIX_ENV: dev
-  #     DB_USERNAME: postgres
-  #     DB_PASSWORD: postgres
-  #     DB_NAME: mg_db
-  #     DB_HOSTNAME: db
-  #   ports:
-  #     - "4000:4000"
-  #   volumes:
-  #     - .:/app
-  #     - deps:/app/deps
-
 networks:
   mg-network:
 
